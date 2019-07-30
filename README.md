@@ -17,7 +17,6 @@ Add Lines to crontab
 
 # How to start the program
 pi@raspberrypi:~/water $ sudo ./water -h
-
 Usage: ./water [flags]
 Example: ./water -s0 -d3 (set default gpio for 3sec. low)
 
