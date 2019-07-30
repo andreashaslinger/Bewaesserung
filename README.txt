@@ -1,21 +1,19 @@
-# Bewaesserung
 Bewässerungssteuerung per Raspberry Pi 
 
-
+Edit crontab:
 pi@raspberrypi:~ $ crontab -e
 
-Add Lines to crontab
-
+Add Lines to crontab:
 \# switch on water pump for 40 seconds at 8am and 8pm
 00 8,20  * * *  sudo /home/pi/water/water -s0 -d40
 
-\# switch on water pump
-\#1 8,20 * * *  sudo /home/pi/water/water -s0pi@raspberrypi:~ $ crontab -e
+# switch on water pump
+#1 8,20 * * *  sudo /home/pi/water/water -s0pi@raspberrypi:~ $ crontab -e
 
-\# switch off water pump
-\#1 8,20  * * *  sudo /home/pi/water/water -s1
+# switch off water pump
+#1 8,20  * * *  sudo /home/pi/water/water -s1
 
-# How to start the program
+How to start the program:
 pi@raspberrypi:~/water $ sudo ./water -h
 Usage: ./water [flags]
 Example: ./water -s0 -d3 (set default gpio for 3sec. low)
