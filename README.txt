@@ -16,9 +16,12 @@ Add Lines to crontab:
 How to start the program:
 pi@raspberrypi:~/water $ sudo ./water -h
 Usage: ./water [flags]
-Example: ./water -s0 -d3 (set default gpio for 3sec. low)
+Example: ./water -g2 -s0 -d3 (set gpio 2 for 3sec. low level)
 
 Flags:
 	-g <number>  	GPIO number to use (4=default)
 	-s <state>   	State for GPIO(0=default 1=high)
 	-d <duration>    Duration in seconds (default=0)
+
+
+The relais cards work on active low level. So when gpio pin is low the relais is switching.
